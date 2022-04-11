@@ -1,7 +1,11 @@
 import React from "react";
 
 function Product(props) {
-  // console.log(props.productImageUrl);
+  
+  function handleUpVote() {
+    props.onVote(props.id);
+  }
+
   return (
     <div className="item">
       <div className="image">
@@ -9,7 +13,7 @@ function Product(props) {
       </div>
       <div className="middle aligned content">
         <div className="header">
-          <a>
+          <a onClick={handleUpVote}>
             <i className="large caret up icon"></i>
           </a>
           {props.votes}
