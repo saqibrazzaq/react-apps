@@ -9,6 +9,8 @@
 - parent to child communication - pass props
 - child to parent communication - pass function in props, call from child
 
+## Picture Like
+
 ![PIc Like app](images/pic-like.jpg)
 
 - Like and add to favorite a picture
