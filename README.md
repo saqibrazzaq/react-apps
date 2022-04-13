@@ -23,3 +23,19 @@
 - Add multiple timers
 - CRUD operation for each timer
 - Timers maintained in array
+
+## Job Search
+
+![Time tracking app](images/job-search.jpg)
+
+- Search keywords in job title and skills
+- Data kept in array
+
+Components heirarchy
+
+- Search
+  - Search Bar
+  - Search Results
+    - Search Results Summary
+    - Filtered Job List
+      - Job
