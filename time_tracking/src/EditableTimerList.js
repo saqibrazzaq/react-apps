@@ -18,6 +18,8 @@ export class EditableTimerList extends Component {
           project={t.project}
           elapsed={t.elapsed}
           runningSince={t.runningSince}
+          onFormSubmit={this.props.onFormSubmit}
+          onTrashClick={this.props.onTrashClick}
         />
       );
     });
