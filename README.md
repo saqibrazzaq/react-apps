@@ -11,7 +11,15 @@
 
 ## Picture Like
 
-![PIc Like app](images/pic-like.jpg)
+![Pic Like app](images/pic-like.jpg)
 
 - Like and add to favorite a picture
 - The list will be sorted by max likes
+
+## Time Tracking
+
+![Time tracking app](images/time-tracking.jpg)
+
+- Add multiple timers
+- CRUD operation for each timer
+- Timers maintained in array
