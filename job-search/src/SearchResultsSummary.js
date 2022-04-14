@@ -7,9 +7,9 @@ export class SearchResultsSummary extends Component {
 
   render() {
     return (
-      <h4 className="ui header">
-        Jobs found: {this.props.jobs.length}
-      </h4>
+      <div className="">
+        <h2 className="ui sub header">Jobs found: {this.props.jobs.length}</h2>
+      </div>
     );
   }
 }

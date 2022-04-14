@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import Job from './Job'
+import React, { Component } from "react";
+import Job from "./Job";
+import JobViewEditContainer from "./JobViewEditContainer";
 
 export class FilteredJobList extends Component {
-
   constructor(props) {
     super(props);
   }
@@ -10,15 +10,16 @@ export class FilteredJobList extends Component {
   render() {
     const jobList = this.props.jobs.map((job) => {
       return (
-        <Job key={job.id} job={job} />
+        <JobViewEditContainer
+          key={job.id}
+          job={job}
+          onFormSubmit={this.props.onFormSubmit}
+          onDeleteJob={this.props.onDeleteJob}
+        />
       );
     });
-    return (
-      <div className='ui divided items'>
-        {jobList}
-      </div>
-    )
+    return <div className="ui divided items">{jobList}</div>;
   }
 }
 
-export default FilteredJobList
+export default FilteredJobList;

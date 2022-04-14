@@ -16,16 +16,20 @@ export class Job extends Component {
     });
 
     return formatter.format(num); /* $2,500.00 */
-  }
+  };
 
   printSkills = (skills) => {
-    return (
-      skills.map((skill) => {
-        return (
-          <div key={skill} className="ui horizontal label">{skill}</div>
-        );
-      })
-    );
+    return skills.map((skill) => {
+      return (
+        <div key={skill} className="ui horizontal label">
+          {skill}
+        </div>
+      );
+    });
+  };
+
+  handleDeleteJob = () => {
+    this.props.onDeleteJob(this.props.job.id);
   }
 
   render() {
@@ -35,19 +39,29 @@ export class Job extends Component {
       <div className="item">
         <div className="content">
           <div className="header">{job.title}</div>
-          <div className="meta">
+          <div>Category: {job.category}</div>
+          <div className="">
             <span className="price">
               Salary: {this.printSalary(job.salaryPkr)}
             </span>
           </div>
-          <div className="meta">
-            <span className="price">
-              Experience: {job.minExpYears} years
-            </span>
+          <div className="">
+            <span className="price">Experience: {job.minExpYears} years</span>
           </div>
           <div>
-            Skills: 
+            Skills:
             {this.printSkills(job.skills)}
+          </div>
+          <div>
+            <button
+              className="ui circular edit icon button"
+              onClick={this.props.onOpenForm}
+            >
+              <i className="edit icon"></i>
+            </button>
+            <button onClick={this.handleDeleteJob} className="ui circular trash icon button">
+              <i className="trash icon"></i>
+            </button>
           </div>
         </div>
       </div>
