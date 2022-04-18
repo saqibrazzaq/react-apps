@@ -40,13 +40,16 @@ export class AllPhones extends Component {
       return <div>Error: {error}</div>;
     } else if (!isLoaded) {
       return <div>Loading...</div>;
-    }else {
+    } else {
       return (
-        <div className="ui list">
-          {phones.map((phone) => {
-            // console.log(phone);
-            return <Phone key={phone.id} phone={phone} />;
-          })}
+        <div className="ui segment">
+          <h2>Phone List</h2>
+          <div className="ui list">
+            {phones.map((phone) => {
+              // console.log(phone);
+              return <Phone key={phone.id} phone={phone} />;
+            })}
+          </div>
         </div>
       );
     }
