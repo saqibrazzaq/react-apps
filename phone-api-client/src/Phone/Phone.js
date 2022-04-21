@@ -8,10 +8,15 @@ export class Phone extends Component {
 
   render() {
     // console.log(this.props.phone);
-    const { name } = this.props.phone;
+    const { name, imageUrl } = this.props.phone;
     return (
-      <div className='item'>
-        {name}
+      <div className='card'>
+        <div className='ui tiny centered image'>
+          <img className='' src={imageUrl} />
+        </div>
+        <div className='ui buttons'>
+          <a className='ui button' href='#'>{name}</a>
+        </div>
       </div>
     )
   }

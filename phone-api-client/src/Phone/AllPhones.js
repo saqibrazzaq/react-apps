@@ -44,7 +44,7 @@ export class AllPhones extends Component {
       return (
         <div className="ui segment">
           <h2>Phone List</h2>
-          <div className="ui list">
+          <div className="ui link cards">
             {phones.map((phone) => {
               // console.log(phone);
               return <Phone key={phone.id} phone={phone} />;
