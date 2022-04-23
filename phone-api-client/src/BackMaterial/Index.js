@@ -35,7 +35,7 @@ export class Index extends Component {
             isLoaded: true,
             items: result.data,
           });
-          console.log("data fetch from server.");
+          // console.log("data fetch from server.");
         },
         (error) => {
           this.setState({
