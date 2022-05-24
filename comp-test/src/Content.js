@@ -1,34 +1,22 @@
-import React from 'react'
+import React from "react";
+import { useState } from "react";
 
-const Content = () => {
+import ItemList from "./ItemList";
 
-  const handleNameChange = () => {
-    const names = ['Saqib', 'Shaheer', 'Rabia'];
-    const int = Math.floor(Math.random() * 3);
-    return names[int];
-  }
-
-  const handleClick = () => {
-    console.log('You clicked it.');
-  }
-
-  const handleClick2 = (name) => {
-    console.log(`${name} clicked it.`);
-  }
-
-  const handleClick3 = (e) => {
-    console.log(e.target);
-  }
-
+const Content = ({ items, handleCheck, handleDelete }) => {
   return (
     <main>
-      <p onDoubleClick={(e) => handleClick3(e)}>
-        Hello {handleNameChange()}!
-      </p>
-
-      <button onClick={(e) => handleClick3(e)}>Click it</button>
+      {items.length ? (
+        <ItemList
+          items={items}
+          handleCheck={handleCheck}
+          handleDelete={handleDelete}
+        />
+      ) : (
+        <p>No items</p>
+      )}
     </main>
-  )
-}
+  );
+};
 
-export default Content
+export default Content;
